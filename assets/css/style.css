@@ -1,0 +1,153 @@
+:root{
+    --black: #0d0160;
+  --lapislazuli: #06516f;
+  --seagreen: #1b545a;
+  --powder: #1a2f3d;
+  --silver: #ffffff;
+  
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mulish', sans-serif;
+}
+
+/* main page */
+body{
+    background: var(--powder);
+    color: var(--silver);
+}
+
+.webHeader{
+    color: var(--silver);
+    background-color: var(--lapislazuli);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+
+}
+
+.container{
+   display: flex; 
+   gap: 30px;
+   padding:30px;
+}
+
+.weatherInput{
+    width: 50%; 
+}
+
+.weatherInput input{
+    width: 100%;
+    height: 40px;
+    outline: none;
+    padding: 0 15px;
+    margin: 10px 0 10px 0;
+    font-size: 1.1 rem;
+    border: 1px solid var(--silver)
+}
+
+.weatherInput .searchBtn{
+    width: 100%;
+    padding:10px 0;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: var(--silver);
+    background-color: var(--lapislazuli);
+    font-size: 1.1rem;
+}
+
+.weatherData{
+    width: 100%;
+}
+
+.currentWeather{
+    color: var(--silver);
+    background-color: var(--lapislazuli);
+    display: flex;
+    border-radius: 5px;
+    padding: 20px 60px 20px 20px;
+    justify-content: space-between;
+}
+
+.currentWeather h2{
+    font-size: 1.5rem;
+}
+
+.weatherData h4{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.currentWeather .weatherIcon img{
+    max-width: 125px;
+    margin-top: -18px;
+}
+
+.currentWeather .weatherIcon h4{
+    margin-top: -12px;
+    text-transform: capitalize;
+}
+
+/* 5days forecast */
+.forecast h2{
+    font-size: 1.5rem;
+    margin: 20px 0 ;
+}
+
+.weatherCards{
+display: flex;
+gap: 20px;
+}
+
+.weatherCards .card{
+    list-style: none;
+    color: var(--silver);
+    background-color: var(--seagreen);
+    padding: 20px 15px;
+    border-radius: 5px;
+    width: calc(100% / 5);
+}
+
+.weatherCards .card img{
+    max-width: 65px;
+    margin: 5px 0 -13px 0;
+}
+
+/* display format */
+@media(max-width: 1400px){
+    .weatherData{
+        padding: 20px;
+    }
+    .weatherCards{
+        flex-wrap: wrap;
+    }
+    .weatherCards .card{
+        width: calc(100% / 3 - 15px);
+    }
+}
+
+@media(max-width: 950px){
+    .weatherInput{
+        width: 450px;
+    }
+    .weatherCards .card{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media(max-width: 750px) {
+    .container{
+        flex-wrap: wrap;
+        padding: 15px;
+    }
+    .weatherInput{
+        width: 100%;
+    }
+}
