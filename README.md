@@ -3,7 +3,7 @@
 ## Description
 This Weather Tracker application allows users to see the weather outlook for multiple cities allowing the user to plan trips accordingly. The user will start by typing the name of a city followed by clicking the search button. once clicked, the user will be presented with the name of the city as well as the conditions, temperature, humidity, and wind speed of both the current weather and the preceding 5-day forecast.
 
-## Usage
+## Sample Code
 
 ```javascript
 var getWeatherDetails = (cityName, lat, lon) => {
