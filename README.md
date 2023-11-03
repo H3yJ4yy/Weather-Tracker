@@ -20,10 +20,11 @@ var getWeatherDetails = (cityName, lat, lon) => {
         });
 ```
 
+##Links
+
 ## Screenshot
 ![Weather-Tracker](https://github.com/H3yJ4yy/Weather-Tracker/assets/143395836/c0b147c5-0387-405e-a22e-9a14233962c6)
 
 
-## Link
-
-[Weather Tracker]()
+## API's Used
+[Open Weather API]https://openweathermap.org/forecast5
