@@ -3,8 +3,8 @@
   --lapislazuli: #06516f;
   --seagreen: #1b545a;
   --powder: #1a2f3d;
-  --silver: #ffffff;
-  
+  --silver: #cbdaec;
+  --white: #ffffff
 }
 
 *{
@@ -17,11 +17,11 @@
 /* main page */
 body{
     background: var(--powder);
-    color: var(--silver);
+    color: var(--white);
 }
 
 .webHeader{
-    color: var(--silver);
+    color: var(--white);
     background-color: var(--lapislazuli);
     padding: 20px 0;
     text-align: center;
@@ -47,16 +47,31 @@ body{
     padding: 0 15px;
     margin: 10px 0 10px 0;
     font-size: 1.1 rem;
-    border: 1px solid var(--silver)
+    border: 1px solid var(--white)
+}
+
+.previousSearches .cityBtn{
+    width: 97%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px 0;
+    margin: 5px 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: var(--black);
+    background-color: var(--silver);
+    font-size: 1.1rem;
 }
 
 .weatherInput .searchBtn{
     width: 100%;
-    padding:10px 0;
+    padding:20px 10px;
     outline: none;
     border: none;
     border-radius: 5px;
-    color: var(--silver);
+    color: var(--white);
     background-color: var(--lapislazuli);
     font-size: 1.1rem;
 }
@@ -66,7 +81,7 @@ body{
 }
 
 .currentWeather{
-    color: var(--silver);
+    color: var(--white);
     background-color: var(--lapislazuli);
     display: flex;
     border-radius: 5px;
@@ -108,7 +123,7 @@ gap: 20px;
 
 .weatherCards .card{
     list-style: none;
-    color: var(--silver);
+    color: var(--white);
     background-color: var(--seagreen);
     padding: 20px 15px;
     border-radius: 5px;

@@ -129,6 +129,34 @@ function getCityCoordinates() {
       alert("Sorry! It seems we can't find those coordinates!");
     });
 }
+
+function getCityCoordinatesForBtn(city) {
+    var GEOCODING_API_URL =
+      "https://api.openweathermap.org/geo/1.0/direct?q=" +
+      city +
+      "&limit=1&appid=" +
+      APIkey +
+      "&units=imperial";
+  
+    fetch(GEOCODING_API_URL)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        if (!data.length) {
+          alert("Sorry! It seems " + city + " does not exist!");
+        } else {
+          var name = data[0].name;
+          var lat = data[0].lat;
+          var lon = data[0].lon;
+          getWeatherDetails(name, lat, lon);
+        }
+      })
+      .catch(function () {
+        alert("Sorry! It seems we can't find those coordinates!");
+      });
+  }
+
 function saveSearch(city) {
   var saveCities = localStorage.getItem("searchHistory");
   if (saveCities) {
@@ -147,8 +175,17 @@ function previousSearches() {
     previousSearchesDiv.innerHTML=""
     var searchHistoryArray = JSON.parse(searchHistory);
     console.log(searchHistoryArray)
+    searchHistoryArray.forEach(function(city){
+        console.log(city);
+        var cityBtn = document.createElement("button");
+        cityBtn.textContent = city;
+        cityBtn.classList.add("cityBtn");
+        cityBtn.addEventListener("click", function(){
+            getCityCoordinatesForBtn(city);
+        });
+        previousSearchesDiv.appendChild(cityBtn);
+    })
   }
-  return;
 }
 previousSearches()
 searchBtn.addEventListener("click", getCityCoordinates);
