@@ -4,7 +4,7 @@ var currentWeather = document.querySelector(".currentWeather");
 var weatherCards = document.querySelector(".weatherCards");
 var previousSearchesDiv = document.querySelector(".previousSearches");
 
-var APIkey = "04783e0f85194e2d59f907621a7cc742";
+var APIkey = "21bbd33576275e22c55fdc74d4f49e21";
 
 function createWeatherCard(cityName, weatherItem, index) {
   if (index === 0) {
