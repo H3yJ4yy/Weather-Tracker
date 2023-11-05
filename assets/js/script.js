@@ -56,7 +56,7 @@ function createWeatherCard(cityName, weatherItem, index) {
 
 function getWeatherDetails(cityName, lat, lon) {
   var WEATHER_API_URL =
-    "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+    "https://api.openweathermap.org/data/2.5/forecast?lat=" +
     lat +
     "&lon=" +
     lon +
@@ -107,7 +107,7 @@ function getCityCoordinates() {
   saveSearch(cityName);
   previousSearches()
   var GEOCODING_API_URL =
-    "http://api.openweathermap.org/geo/1.0/direct?q=" +
+    "https://api.openweathermap.org/geo/1.0/direct?q=" +
     cityName +
     "&limit=1&appid=" +
     APIkey +
